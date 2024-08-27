@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIN</title>
+</head>
+<body>
+    <script>
+        function validate() {
+            let pin = prompt("Enter your PIN:");
+            if (!/^\d+$/.test(pin)) {
+                alert("Please enter numbers only.");
+                return;
+            }
+            if (pin.length !== 4 && pin.length !== 6) {
+                alert("PIN should be either 4 or 6 digits long.");
+                return;
+            }
+            alert("Login Successful.");
+        }
+        validate();
+    </script>
+</body>
+</html>
